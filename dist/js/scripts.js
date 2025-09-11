@@ -45,14 +45,20 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
 
+        //Add tada animation to button when it comes into view
+        const button = document.getElementById('tadaButton');
+        if (window.scrollY >= button.offsetTop - 550) {
+            button.classList.add('animate__animated', 'animate__tada');
+        }
+
         document.querySelectorAll('.nav-link').forEach(link => {
             link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
         });
     });
 
     // Activate SimpleLightbox plugin for portfolio items
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
+//    new SimpleLightbox({
+//        elements: '#portfolio a.portfolio-box'
+//    });
 
 });

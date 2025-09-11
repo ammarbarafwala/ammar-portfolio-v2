@@ -23,6 +23,10 @@ html(lang='en')
         // SimpleLightbox plugin CSS
         link(href='https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css', rel='stylesheet')
 
+
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', rel='stylesheet')
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', rel='stylesheet')
+
         // Core theme CSS (includes Bootstrap)
         link(href='css/styles.css', rel='stylesheet')
 
@@ -41,7 +45,11 @@ html(lang='en')
                         li.nav-item
                             a.nav-link(href='#experience') Experience
                         li.nav-item
-                            a.nav-link(href='#portfolio') Portfolio
+                            a.nav-link(href='#portfolio') Projects
+                        li.nav-item
+                            a.nav-link(href='#education') Education
+                        li.nav-item
+                            a.nav-link(href='#resume') Resume
                         li.nav-item
                             a.nav-link(href='#contact') Contact
 
@@ -78,40 +86,42 @@ html(lang='en')
                     .col-lg-6.col-md-6.text-center
                         .mt-0
                             .mb-2
-                            a.portfolio-box(href='https://www.necam.com/', title='NECAM')
+                            a.portfolio-box(href='https://www.necam.com/', target='_blank', title='NECAM')
                                 img.img-fluid(src='assets/img/necam_blue.jpeg', alt='...')
                             h3.h4.mb-2 Senior Software Engineer
                             p.text-muted.mb-0 May 2020 - Present
                     .col-lg-6.col-md-6.text-center
                         .mt-0
                             .mb-2
-                            a.portfolio-box(href='https://about.google/company-info/', title='Google')
+                            a.portfolio-box(href='https://about.google/company-info/', target='_blank', title='Google')
                                 img.img-fluid(src='assets/img/google_logo.jpeg', alt='...')
                             h3.h4.mb-2 Full Stack Developer
                             p.text-muted.mb-0 Jan 2019 - May 2020
 
         // Portfolio
-        section#portfolio
+        section#portfolio.page-section.bg-light
             .container-fluid.p-0
+                h2.text-center.mt-0 Projects
+                hr.divider
                 .row.g-0
                     .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/1.jpg', title='Project Name')
+                        a.portfolio-box(href='https://github.com/ammarbarafwala/techit-server-java', target='_blank', title='Tech IT')
                             img.img-fluid(src='assets/img/portfolio/thumbnails/1.jpg', alt='...')
                             .portfolio-box-caption
                                 .project-category.text-white-50
-                                    | Category
+                                    | Web Development
                                 .project-name
-                                    | Project Name
+                                    | Tech IT
                     .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/2.jpg', title='Project Name')
+                        a.portfolio-box(href='https://github.com/ammarbarafwala/live-qwizz', target='_blank', title='Live Qwizz')
                             img.img-fluid(src='assets/img/portfolio/thumbnails/2.jpg', alt='...')
                             .portfolio-box-caption
                                 .project-category.text-white-50
-                                    | Category
+                                    | Web Development
                                 .project-name
-                                    | Project Name
+                                    | Live Qwizz
                     .col-lg-4.col-sm-6
-                        a.portfolio-box(href='assets/img/portfolio/fullsize/3.jpg', title='Project Name')
+                        a.portfolio-box(href='assets/img/portfolio/fullsize/3.jpg', target='_blank', title='Project Name')
                             img.img-fluid(src='assets/img/portfolio/thumbnails/3.jpg', alt='...')
                             .portfolio-box-caption
                                 .project-category.text-white-50
@@ -143,11 +153,28 @@ html(lang='en')
                                 .project-name
                                     | Project Name
 
+        // Education
+        section#education.page-section
+            .container.px-4.px-lg-5
+                h2.text-center.mt-0 Education
+                hr.divider
+                .row.gx-4.gx-lg-5
+                    .col-lg-6.col-md-6.text-center
+                        .mt-0
+                            .mb-2
+                            h3.h4.mb-2 California State University, Los Angeles
+                            p.text-muted.mb-0 Master of Science, Computer Science
+                    .col-lg-6.col-md-6.text-center
+                        .mt-0
+                            .mb-2
+                            h3.h4.mb-2 University of Mumbai, India
+                            p.text-muted.mb-0 Bachelor of Engineering, Computer Engineering
+
         // Call to action
-        section.page-section.bg-dark.text-white
+        section#resume.page-section.bg-dark.text-white
             .container.px-4.px-lg-5.text-center
                 h2.mb-4 My Resume!
-                a.btn.btn-light.btn-xl(href='https://startbootstrap.com/theme/creative/') Download Now!
+                a.btn#tadaButton.btn-light.btn-xl(href='../assets/files/Ammar_Barafwala_SeniorFullStackEngineer_6yrsExp.pdf' download) Download Now!
 
         // Contact
         section#contact.page-section
